@@ -25,9 +25,7 @@ Route::get('review',function (){
     return view('Admin.Review');
 });
 
-Route::get('dashboard', function (){
-    return view('Admin.index');
-});
+Route::get('dashboard', [\App\Http\Controllers\Dashboard::class,'index']);
 
 
 
