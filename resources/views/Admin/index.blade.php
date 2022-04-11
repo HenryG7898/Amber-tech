@@ -2,10 +2,31 @@
 
 @section('content')
     <main class="relative flex-1 overflow-y-auto focus:outline-none">
-        <div class="w-11/12 mx-auto my-20 bg-white">
+        <div class="w-full px-8 py-4 mx-auto bg-white shadow-md dark:bg-gray-800">
+
+            <div class="flex items-center justify-between">
+
+            <span class="lg:text-lg text-sm lg:font-medium font-light text-gray-800 dark:text-gray-400">
+
+              Amber Tech Dashboard
+
+            </span>
+
+{{--                <a @click="isOpen =true" class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-200 transform bg-indigo-600--}}
+{{--                      rounded cursor-pointer hover:bg-indigo-500">--}}
+
+{{--                    Create Parent--}}
+
+{{--                </a>--}}
+
+            </div>
+        </div>
+        <div class="w-11/12 mx-auto my-10 bg-white">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
+
+
                         <div class="p-8 text-sm text-gray-800">
                             <h1 class="text-4xl text-gray-700 font-bold leading-none mb-8 text-center">Student List</h1>
                             <table class="border w-full text-center shadow-sm">

@@ -12,10 +12,10 @@ class ViewStudent extends Controller
 {
     public function studentinfo($id)
     {
-        $data = User::with('parent')->where('id',$id)->get();
-//        $data = Parent_class::with('student')->where('id', $id)->get();
-//        dd($data);
-        return view('Admin.ViewInfo',['data'=>$data]);
+        $data = User::where('id',$id)->get();
+//        $data = User::with('parent')->where('id',$id)->get();
+        $parent = Parent_class::where('student_id', $id)->get();
+        return view('Admin.ViewInfo',['data'=>$data,'parent'=>$parent]);
     }
 
     public function store(Request $request){

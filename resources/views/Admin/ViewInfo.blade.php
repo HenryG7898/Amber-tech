@@ -172,30 +172,37 @@
                         <div class="grid grid-cols-2">
                             <div class="px-4 py-2 ">First Name:</div>
                             <div class="px-4 py-2">{{$data[0]->first_nm}}</div>
+{{--                            <div class="px-4 py-2">{{$data[0]->student->first_nm}}</div>--}}
                         </div>
                         <div class="grid grid-cols-2">
                             <div class="px-4 py-2 ">Last Name:</div>
                             <div class="px-4 py-2">{{$data[0]->last_nm}}</div>
+{{--                            <div class="px-4 py-2">{{$data[0]->student->last_nm}}</div>--}}
                         </div>
                         <div class="grid grid-cols-2">
                             <div class="px-4 py-2 ">Gender:</div>
                             <div class="px-4 py-2">{{$data[0]->gender}}</div>
+{{--                            <div class="px-4 py-2">{{$data[0]->student->gender}}</div>--}}
                         </div>
                         <div class="grid grid-cols-2">
                             <div class="px-4 py-2 ">Phone Number:</div>
                             <div class="px-4 py-2">{{$data[0]->phone_nbr}}</div>
+{{--                            <div class="px-4 py-2">{{$data[0]->student->phone_nbr}}</div>--}}
                         </div>
                         <div class="grid grid-cols-2">
                             <div class="px-4 py-2 ">Role:</div>
                             <div class="px-4 py-2">{{$data[0]->user_type}}</div>
+{{--                            <div class="px-4 py-2">{{$data[0]->student->user_type}}</div>--}}
                         </div>
                         <div class="grid grid-cols-2">
                             <div class="px-4 py-2 ">Date of Birth:</div>
                             <div class="px-4 py-2">{{$data[0]->dob}}</div>
+{{--                            <div class="px-4 py-2">{{$data[0]->student->dob}}</div>--}}
                         </div>
                         <div class="grid grid-cols-2">
                             <div class="px-4 py-2 ">Email:</div>
                             <div class="px-4 py-2">{{$data[0]->email}}</div>
+{{--                            <div class="px-4 py-2">{{$data[0]->student->email}}</div>--}}
                         </div>
                     </div>
                 </div>
@@ -221,26 +228,31 @@
 
                     </tr>
                     </thead>
-
+{{--@if ($data[0])--}}
                         <tr>
-                            @foreach($data as $value)
-{{--                                @if ($value->student_id === $data[0]->student->id)--}}
-{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value[0]->parent->first_nm}}</td>--}}
-{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->last_nm}}</td>--}}
-{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->DOB}}</td>--}}
-{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->gender}}</td>--}}
-{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->phone_nbr}}</td>--}}
-{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->relation}}</td>--}}
-{{--                            <td class="py-4 px-6 border-b border-grey-light"></td>--}}
-{{--                                @endif--}}
+                            @foreach($parent as $value)
+{{--                                {{ dd($value->parent) }}--}}
+{{--                                @if ($value->student_id === $value->student->id )--}}
+                                    <td class="py-4 px-6 border-b border-grey-light">{{($value->first_nm)}}</td>
+                                    <td class="py-4 px-6 border-b border-grey-light">{{$value->last_nm}}</td>
+                                    <td class="py-4 px-6 border-b border-grey-light">{{$value->DOB}}</td>
+                                    <td class="py-4 px-6 border-b border-grey-light">{{$value->gender}}</td>
+                                    <td class="py-4 px-6 border-b border-grey-light">{{$value->phone_nbr}}</td>
+                                    <td class="py-4 px-6 border-b border-grey-light">{{$value->relation}}</td>
+                                    <td class="py-4 px-6 border-b border-grey-light"></td>
+
+{{--                                @else--}}
+{{--                                    <h2 class="text-5xl font-bold mb-10 text-gray-800 text-center">Sorry! No Parent Available</h2>--}}
+
+{{--                    @endif--}}
 
 {{--                    <div class="text-white bg-black">--}}
 {{--                        {{ $data->links() }}--}}
 {{--                    </div>--}}
                         </tr>
-                    @endforeach
-                    @else
-                        <h2 class="text-5xl font-bold mb-10 text-gray-800 text-center">Sorry! No Student Available</h2>
+
+                        @endforeach
+
 
 
                 </table>

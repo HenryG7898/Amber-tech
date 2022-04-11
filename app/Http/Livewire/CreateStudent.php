@@ -36,6 +36,15 @@ class CreateStudent extends Component
         'phone_nbr.required' => 'The Phone Number field is required.',
     ];
 
+    public function resetForm(){
+        $this->first_nm='';
+        $this->last_nm='';
+        $this->dob='';
+        $this->phone_nbr='';
+        $this->gender='';
+        $this->email='';
+        $this->password='';
+    }
 
     public function newstudent()
     {
@@ -45,7 +54,7 @@ class CreateStudent extends Component
             'first_nm' => $this->first_nm,
             'last_nm'  => $this->last_nm,
             'dob'  => $this->dob,
-            'phone_nbr'  => $this->dob,
+            'phone_nbr'  => $this->phone_nbr,
             'gender'  => $this->gender,
             'email' => $this->email,
 //            'user_type' => 'Teacher',
@@ -54,7 +63,7 @@ class CreateStudent extends Component
 
         session()->flash('success', 'Student account was registered!');
 
-
+        $this->resetForm();
     }
 
     public function updated()
