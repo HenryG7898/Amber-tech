@@ -11,4 +11,9 @@ class Dashboard extends Controller
         $student = User::all();
         return view('Admin.index',['student' => $student]);
     }
+
+    public function show(){
+        $card = User::all();
+        return view('Admin.profile-card',['card'=>$card]);
+    }
 }

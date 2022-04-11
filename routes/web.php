@@ -34,10 +34,17 @@ Route::view('login','login')->name('login');
 Route::get('register', [\App\Http\Controllers\RegisterController::class,'index']);
 Route::post('register', [\App\Http\Controllers\RegisterController::class,'store']);
 
+Route::view('teacher','Admin.add-teacher');
+Route::view('student','Admin.add-student');
+
+Route::get('profile-card',[\App\Http\Controllers\Dashboard::class,'show']);
+
+Route::get('ViewStudent/{id}',[\App\Http\Controllers\ViewStudent::class,'studentinfo']);
+
+Route::get('Edit-student/{id}',[\App\Http\Controllers\StudentClassController::class,'Edit']);
+Route::post('update-student',[\App\Http\Controllers\StudentClassController::class,'updatestudent']);
 
 Route::middleware(['auth'])->group( function (){
-    Route::view('student','Admin.add-student');
-    Route::view('teacher','Admin.add-teacher');
     Route::get('student-dashboard', function (){
         return view('Student-View.index');
     });

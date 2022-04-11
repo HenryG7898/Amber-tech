@@ -176,11 +176,11 @@
                         hover:border-indigo-800
                         focus:shadow-outline
                         hover:bg-indigo-600
-                      " white="" 70="" href="#">
+                      " white="" 70="" href="{{ url('profile-card') }}">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                                     </svg>
-                                    <span class="ml-4"> Tasks</span>
+                                    <span class="ml-4">Profile Cards</span>
                                 </a>
                             </li>
                             <li>
@@ -309,27 +309,12 @@
 </div>
 
 <script>
-    var mySwiper = new Swiper ('.swiper-container', {
-        // Optional parameters
-        // direction: 'horizontal',
-        loop: false,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
+    var swiper = new Swiper('.mySwiper', {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    })
+    });
 </script>
 @livewireScripts
 </body>
