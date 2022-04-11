@@ -14,7 +14,7 @@ class ViewStudent extends Controller
     {
         $data = User::with('parent')->where('id',$id)->get();
 //        $data = Parent_class::with('student')->where('id', $id)->get();
-        dd($data);
+//        dd($data);
         return view('Admin.ViewInfo',['data'=>$data]);
     }
 

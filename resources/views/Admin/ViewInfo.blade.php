@@ -225,13 +225,13 @@
                         <tr>
                             @foreach($data as $value)
 {{--                                @if ($value->student_id === $data[0]->student->id)--}}
-                            <td class="py-4 px-6 border-b border-grey-light">{{$value->first_nm}}</td>
-                            <td class="py-4 px-6 border-b border-grey-light">{{$value->last_nm}}</td>
-                            <td class="py-4 px-6 border-b border-grey-light">{{$value->DOB}}</td>
-                            <td class="py-4 px-6 border-b border-grey-light">{{$value->gender}}</td>
-                            <td class="py-4 px-6 border-b border-grey-light">{{$value->phone_nbr}}</td>
-                            <td class="py-4 px-6 border-b border-grey-light">{{$value->relation}}</td>
-                            <td class="py-4 px-6 border-b border-grey-light"></td>
+{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value[0]->parent->first_nm}}</td>--}}
+{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->last_nm}}</td>--}}
+{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->DOB}}</td>--}}
+{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->gender}}</td>--}}
+{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->phone_nbr}}</td>--}}
+{{--                            <td class="py-4 px-6 border-b border-grey-light">{{$value->relation}}</td>--}}
+{{--                            <td class="py-4 px-6 border-b border-grey-light"></td>--}}
 {{--                                @endif--}}
 
 {{--                    <div class="text-white bg-black">--}}
