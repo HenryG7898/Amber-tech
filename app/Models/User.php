@@ -55,7 +55,7 @@ class User extends Authenticatable
         return $this->hasMany(class_schedule::class);
     }
     public function parent(){
-        $this->hasMany(Parent_class::class);
+       return $this->belongsTo(Parent_class::class,'student_id', 'id');
     }
 
 }

@@ -19,4 +19,8 @@ class Parent_class extends Model
         'relation',
         'email',
     ];
+
+    public function student(){
+        return $this->belongsTo(User::class,'student_id','id');
+    }
 }

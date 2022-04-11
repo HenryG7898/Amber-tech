@@ -16,7 +16,7 @@
                         <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src="{{$cards->profile_img}}" alt="Image Size 720x400">
                         <h3 class="tracking-widest text-black text-xs font-bold title-font">{{$cards->user_type}}</h3>
                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ $cards->first_nm.' '.$cards->last_nm }}</h2>
-                        <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                        <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                     </div>
                 </div>
 

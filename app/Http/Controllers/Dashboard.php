@@ -9,6 +9,7 @@ class Dashboard extends Controller
 {
     public function index(){
         $student = User::all();
+//        dd($student);
         return view('Admin.index',['student' => $student]);
     }
 

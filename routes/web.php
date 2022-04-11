@@ -40,6 +40,7 @@ Route::view('student','Admin.add-student');
 Route::get('profile-card',[\App\Http\Controllers\Dashboard::class,'show']);
 
 Route::get('ViewStudent/{id}',[\App\Http\Controllers\ViewStudent::class,'studentinfo']);
+Route::post('Add-parent',[\App\Http\Controllers\ViewStudent::class,'store']);
 
 Route::get('Edit-student/{id}',[\App\Http\Controllers\StudentClassController::class,'Edit']);
 Route::post('update-student',[\App\Http\Controllers\StudentClassController::class,'updatestudent']);
