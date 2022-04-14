@@ -29,7 +29,7 @@
               border-r
             ">
                 <div class="flex flex-col items-center flex-shrink-0 px-4">
-                    <a href="" class="px-8 text-left focus:outline-none">
+                    <a href="{{ url('dashboard') }}" class="px-8 text-left focus:outline-none">
                         <h2 class="
                     block
                     p-2
@@ -304,6 +304,13 @@
         </div>
     </div>
     <div class="flex flex-col flex-1 w-0 overflow-hidden">
+{{--        <div class="w-full px-8 py-4 mx-auto bg-white shadow-md dark:bg-gray-800">--}}
+{{-- <span class="lg:text-lg text-sm lg:font-medium font-light text-gray-800 dark:text-gray-400">--}}
+
+{{--              Amber Tech Dashboard--}}
+
+{{--            </span>--}}
+{{--        </div>--}}
         @yield('content')
     </div>
 </div>

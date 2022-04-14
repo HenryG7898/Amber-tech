@@ -11,7 +11,8 @@
             </div>
             <div class="flex flex-wrap -m-4">
                 @foreach($card as $cards)
-                <div class="xl:w-1/3 md:w-1/2 p-4">
+                    <a class="xl:w-1/3 md:w-1/2 p-4" href="{{ url('ViewStudent/'. $cards->id) }}">
+                <div >
                     <div class="bg-white hover:bg-orange-600 hover:text-white p-6 rounded-lg">
                         <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src="{{$cards->profile_img}}" alt="Image Size 720x400">
                         <h3 class="tracking-widest text-black text-xs font-bold title-font">{{$cards->user_type}}</h3>
@@ -19,7 +20,7 @@
                         <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                     </div>
                 </div>
-
+                    </a>
                 @endforeach
 
 

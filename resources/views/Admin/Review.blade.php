@@ -1,7 +1,7 @@
 @extends('layout.admin')
 
 @section('content')
-    <div class="p-8 text-sm text-gray-800">
+    <div class="p-8 text-sm text-gray-800 overflow-y-auto">
         <h1 class="text-4xl text-gray-700 font-bold leading-none mb-8 text-center">Assign Class</h1>
         <table class="border w-full text-center shadow-sm">
             <thead>

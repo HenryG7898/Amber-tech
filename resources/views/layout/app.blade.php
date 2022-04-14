@@ -10,10 +10,10 @@
     @livewireStyles
 </head>
 <body>
-<!-- This example requires Tailwind CSS v2.0+ -->
+
 <div id="app" class="relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div class="flex justify-between items-center border-b-2 border-gray-100 py-4 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
                 <a href="{{ url('/') }}">
                     <span class="sr-only">Workflow</span>
@@ -30,17 +30,12 @@
             </div>
             <nav class="hidden md:flex space-x-10">
                 @auth
-
-
                     <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
                         Class Schedule
                     </a>
                     <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
                         Report
                     </a>
-
-
-
             </nav>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
 
@@ -63,7 +58,6 @@
     </div>
 </div>
 
-<!-- body -->
 <div class="    ">
     @yield('content')
 </div>

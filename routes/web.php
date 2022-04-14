@@ -25,6 +25,9 @@ Route::get('review',function (){
     return view('Admin.Review');
 });
 
+Route::get('Contact',[\App\Http\Controllers\ReportAdminController::class,'index']);
+Route::post('report',[\App\Http\Controllers\ReportAdminController::class,'reportstore']);
+
 Route::get('dashboard', [\App\Http\Controllers\Dashboard::class,'index']);
 
 

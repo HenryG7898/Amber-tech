@@ -239,7 +239,10 @@
                                     <td class="py-4 px-6 border-b border-grey-light">{{$value->gender}}</td>
                                     <td class="py-4 px-6 border-b border-grey-light">{{$value->phone_nbr}}</td>
                                     <td class="py-4 px-6 border-b border-grey-light">{{$value->relation}}</td>
-                                    <td class="py-4 px-6 border-b border-grey-light"></td>
+                                    <td class="py-4 px-6 border-b border-grey-light">
+                                        <a href="#" class="btn btn-primary p-2 text-white rounded font-bold bg-black hover:bg-red-700 hover:text-black" >Delete</a>
+
+                                    </td>
 
 {{--                                @else--}}
 {{--                                    <h2 class="text-5xl font-bold mb-10 text-gray-800 text-center">Sorry! No Parent Available</h2>--}}

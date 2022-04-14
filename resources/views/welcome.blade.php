@@ -69,5 +69,32 @@
             <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://cambridgeteachingnetwork.files.wordpress.com/2020/12/istock-976595416.jpg?w=750" alt="">
         </div>
     </div>
+    <div class="my-5"></div>
+    <section class="w-full  text-gray-900 h-full py-36 bg-gradient-to-b from-white via-orange-600 to-orange-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 flex items-center justify-center">
+            <div class="lg:w-3/6 lg:pr-0 pr-0">
+                <h1 class="font-medium text-5xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <p class="leading-relaxed mt-4 text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="lg:w-3/6 xl:w-2/5 md:w-full bg-gray-50 p-8 flex flex-col lg:ml-auto w-full mt-10 lg:mt-0 rounded-md">
+                <img src="https://evernote.com/c/assets/homepage-repackaging/clip_the_web__en.png?117a41cc66580358" alt="">
+            </div>
+        </div>
+        <div class="my-20"></div>
+        <div class="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-4 flex items-center justify-center">
+            <div class="lg:w-3/6 lg:pr-0 bg-gray-50 pr-0 p-8 rounded-md">
+                <img src="https://evernote.com/c/assets/homepage-repackaging/clip_the_web__en.png?117a41cc66580358" alt="">
+            </div>
+            <div class="lg:w-3/6 xl:w-2/5 md:w-full flex flex-col lg:ml-auto w-full mt-10 lg:mt-0 ">
+                <h1 class="font-medium text-5xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <p class="leading-relaxed mt-4 text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </section>
+
 
 @endsection

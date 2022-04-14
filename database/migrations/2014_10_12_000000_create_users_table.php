@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('dob');
             $table->string('gender');
             $table->string('phone_nbr');
-            $table->string('user_type')->default('student');
+            $table->string('user_type')->default('Student');
             $table->string('profile_img')->default('public/default.png');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
