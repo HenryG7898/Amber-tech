@@ -45,6 +45,8 @@
                         <div>
                             <label for="email" class="block mb-2 text-sm font-bold text-black">Email:</label>
                             <input type="email" wire:model="email" id="email"  class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            <span class="text-red-700 text-2xs">@error('email') {{$message}} @enderror</span>
+
                         </div>
 
                         <div class="mt-6">
@@ -53,7 +55,9 @@
                                 <a href="#" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Forgot password?</a>
                             </div>
 
-                            <input type="password" wire:model="password" id="password"  class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            <input type="password" wire:model="password" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            <span class="text-red-700 text-2xs">@error('password') {{$message}} @enderror</span>
+
                         </div>
 
                         <div class="mt-6">

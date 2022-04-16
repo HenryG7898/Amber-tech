@@ -17,7 +17,8 @@
             <div class="flex justify-start lg:w-0 lg:flex-1">
                 <a href="{{ url('/') }}">
                     <span class="sr-only">Workflow</span>
-                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                    <span class="text-3xl font-bold text-orange-600">AMBER TECH</span>
+{{--                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">--}}
                 </a>
             </div>
             <div class="-mr-2 -my-2 md:hidden">
@@ -44,7 +45,8 @@
                    <button type="submit">Logout</button>
                 </form>
             </div>
-            @else
+            @endauth
+            @guest
                 <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                     <a href="{{ url('login') }}" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                         Sign in
@@ -53,7 +55,7 @@
                         Sign up
                     </a>
                 </div>
-            @endauth
+            @endguest
         </div>
     </div>
 </div>
@@ -62,35 +64,35 @@
     @yield('content')
 </div>
 
-<script >
-    const eventBus = {
-        list: new Map(),
-        on(eventType, eventAction) {
-            this.list.has(eventType) || this.list.set(eventType, []);
-            if (this.list.get(eventType)) this.list.get(eventType).push(eventAction);
-            return this;
-        },
+{{--<script >--}}
+{{--    const eventBus = {--}}
+{{--        list: new Map(),--}}
+{{--        on(eventType, eventAction) {--}}
+{{--            this.list.has(eventType) || this.list.set(eventType, []);--}}
+{{--            if (this.list.get(eventType)) this.list.get(eventType).push(eventAction);--}}
+{{--            return this;--}}
+{{--        },--}}
 
-        emit(eventType, ...args) {
-            this.list.get(eventType) &&
-            this.list.get(eventType).forEach((cb) => {
-                cb(...args);
-            });
-        }
-    };
+{{--        emit(eventType, ...args) {--}}
+{{--            this.list.get(eventType) &&--}}
+{{--            this.list.get(eventType).forEach((cb) => {--}}
+{{--                cb(...args);--}}
+{{--            });--}}
+{{--        }--}}
+{{--    };--}}
 
-    const vm = new Vue({
-        el: '#app',
-        data() {
-            return {
-                solutions: false,
-                more: false,
-                menu: false
-            }
-        }
-    });
+{{--    const vm = new Vue({--}}
+{{--        el: '#app',--}}
+{{--        data() {--}}
+{{--            return {--}}
+{{--                solutions: false,--}}
+{{--                more: false,--}}
+{{--                menu: false--}}
+{{--            }--}}
+{{--        }--}}
+{{--    });--}}
 
-</script>
+{{--</script>--}}
 @livewireScripts
 </body>
 </html>

@@ -157,6 +157,7 @@
 {{--                            </li>--}}
                         </ul>
 {{--                        <p class="px-4 pt-4 font-medium text-white uppercase">Shortcuts</p>--}}
+
                         <ul>
                             <li>
                                 <a class="
@@ -177,12 +178,13 @@
                         focus:shadow-outline
                         hover:bg-indigo-600
                       " white="" 70="" href="{{ url('profile-card') }}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-                                    </svg>
+{{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>--}}
+{{--                                    </svg>--}}
                                     <span class="ml-4">Profile Cards</span>
                                 </a>
                             </li>
+                            <div class="my-5"></div>
                             <li>
                                 <a class="
                         inline-flex
@@ -233,6 +235,7 @@
                                     <span class="ml-4"> Add Student</span>
                                 </a>
                             </li>
+
                             <li>
                                 <a class="
                         inline-flex
@@ -258,33 +261,112 @@
                                     <span class="ml-4">Add Teacher</span>
                                 </a>
                             </li>
-
-{{--                            <li>--}}
-{{--                                <a class="--}}
-{{--                        inline-flex--}}
-{{--                        items-center--}}
-{{--                        w-full--}}
-{{--                        px-4--}}
-{{--                        py-2--}}
-{{--                        mt-1--}}
-{{--                        text-base text-white--}}
-{{--                        transition--}}
-{{--                        duration-500--}}
-{{--                        ease-in-out--}}
-{{--                        transform--}}
-{{--                        border-indigo-800--}}
-{{--                        rounded-lg--}}
-{{--                        hover:border-indigo-800--}}
-{{--                        focus:shadow-outline--}}
-{{--                        hover:bg-indigo-600--}}
-{{--                      " white="" 70="" href="#">--}}
+                            <div class="my-5"></div>
+                            <li>
+                                <a class="
+                        inline-flex
+                        items-center
+                        w-full
+                        px-4
+                        py-2
+                        mt-1
+                        text-base text-white
+                        transition
+                        duration-500
+                        ease-in-out
+                        transform
+                        border-indigo-800
+                        rounded-lg
+                        hover:border-indigo-800
+                        focus:shadow-outline
+                        hover:bg-indigo-600
+                      " white="" 70="" href="#">
 {{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
 {{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>--}}
 {{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>--}}
 {{--                                    </svg>--}}
-{{--                                    <span class="ml-4"> Dashboard</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
+                                    <span class="ml-4">Add Subject</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="
+                        inline-flex
+                        items-center
+                        w-full
+                        px-4
+                        py-2
+                        mt-1
+                        text-base text-white
+                        transition
+                        duration-500
+                        ease-in-out
+                        transform
+                        border-indigo-800
+                        rounded-lg
+                        hover:border-indigo-800
+                        focus:shadow-outline
+                        hover:bg-indigo-600
+                      " white="" 70="" href="#">
+{{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>--}}
+{{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>--}}
+{{--                                    </svg>--}}
+                                    <span class="ml-4"> Assign Teacher To Class</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="
+                        inline-flex
+                        items-center
+                        w-full
+                        px-4
+                        py-2
+                        mt-1
+                        text-base text-white
+                        transition
+                        duration-500
+                        ease-in-out
+                        transform
+                        border-indigo-800
+                        rounded-lg
+                        hover:border-indigo-800
+                        focus:shadow-outline
+                        hover:bg-indigo-600
+                      " white="" 70="" href="#">
+{{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>--}}
+{{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>--}}
+{{--                                    </svg>--}}
+                                    <span class="ml-4">Add Student To Class</span>
+                                </a>
+                            </li>
+                            <li>
+                                <form method="post" action="{{ url('logout') }}" white="" 70="">
+{{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>--}}
+{{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>--}}
+{{--                                    </svg>--}}
+                                    @csrf
+                                    <button type="submit" class="
+                                            inline-flex
+                                            items-center
+                                            w-full
+                                            px-4
+                                            py-2
+                                            mt-1
+                                            text-base text-white
+                                            transition
+                                            duration-500
+                                            ease-in-out
+                                            transform
+                                            border-indigo-800
+                                            rounded-lg
+                                            hover:border-indigo-800
+                                            focus:shadow-outline
+                                            hover:bg-indigo-600
+                                    ">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </nav>
                 </div>

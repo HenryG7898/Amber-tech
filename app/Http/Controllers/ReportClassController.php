@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class ReportClassController extends Controller
 {
     public function index(){
-        return view();
+        $report = report_class::with('student')->get();
+        return view('Admin.report',['report'=>$report]);
     }
 
     public function reportstore(Request $request){
