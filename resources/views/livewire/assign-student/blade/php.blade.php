@@ -5,7 +5,7 @@
 
         <section
             class="w-3/5 p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
-            <div class="">
+            <div >
                 @if(session()->has('success'))
                     <div class="bg-green-200 px-6 py-4 mx-2 my-4 rounded-md text-lg flex items-center mx-auto w-3/4 xl:w-2/4">
                         <svg viewBox="0 0 24 24" class="text-green-600 w-5 h-5 sm:w-5 sm:h-5 mr-3">
@@ -16,7 +16,7 @@
                         <span class="text-green-800"> {{ session('success') }} </span>
                     </div>
                 @endif
-                <div class="">
+                <div>
                     <h2 class="text-3xl font-bold mb-10 text-gray-800 text-center">Assign Student To Class</h2>
 
                     <form class="space-y-5 space-x-1" wire:submit.prevent="assignclass">
@@ -25,11 +25,11 @@
                                 <label class="block mb-1 font-bold text-gray-500">Student Name</label>
                                 <select wire:model="student_id" id="" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
                                     <option value="">Select a Student</option>
-{{--                                    @foreach($student as $students)--}}
-{{--                                        @if ($students->user_type === 'student')--}}
-{{--                                            <option value="{{ $students->id }}">{{ $students->first_nm.' '.$students->last_nm }}</option>--}}
-{{--                                        @endif--}}
-{{--                                    @endforeach--}}
+                                    @foreach($student as $students)
+                                        @if ($students->user_type === 'student')
+                                            <option value="{{ $students->id }}">{{ $students->first_nm.' '.$students->last_nm }}</option>
+                                        @endif
+                                    @endforeach
                                 </select>
                                 @error('student_id') <span class="error text-red-600">{{ $message }}</span> @enderror
                             </div>
@@ -37,9 +37,9 @@
                                 <label class="block mb-1 font-bold text-gray-500">Class:</label>
                                 <select wire:model="class_id" id="" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
                                     <option value="">Select a Class</option>
-{{--                                    @foreach($class as $classes)--}}
-{{--                                        <option value="{{ $classes->id }}">{{ $classes->class_nm.' ' . $classes->subject->subject_nm }}</option>--}}
-{{--                                    @endforeach--}}
+                                    @foreach($class as $classes)
+                                        <option value="{{ $classes->id }}">{{ $classes->class_nm }}</option>
+                                    @endforeach
                                 </select>
                                 @error('class_id') <span class="error text-red-600">{{ $message }}</span> @enderror
                             </div>

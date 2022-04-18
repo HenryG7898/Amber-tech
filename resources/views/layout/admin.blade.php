@@ -280,7 +280,7 @@
                         hover:border-indigo-800
                         focus:shadow-outline
                         hover:bg-indigo-600
-                      " white="" 70="" href="#">
+                      " white="" 70="" href="{{ url('subject') }}">
 {{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
 {{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>--}}
 {{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>--}}
@@ -306,7 +306,7 @@
                         hover:border-indigo-800
                         focus:shadow-outline
                         hover:bg-indigo-600
-                      " white="" 70="" href="#">
+                      " white="" 70="" href="{{ url('Assign-teacher') }}">
 {{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
 {{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>--}}
 {{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>--}}
@@ -332,7 +332,7 @@
                         hover:border-indigo-800
                         focus:shadow-outline
                         hover:bg-indigo-600
-                      " white="" 70="" href="#">
+                      " white="" 70="" href="{{ url('Assign-student') }}">
 {{--                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
 {{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>--}}
 {{--                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>--}}
@@ -374,10 +374,10 @@
                     <a href="#" class="flex-shrink-0 block w-full group">
                         <div class="flex items-center">
                             <div>
-                                <img class="inline-block rounded-full h-9 w-9" src="./images/wickedlabslogo.jpg" alt="">
+                                <img class="inline-block rounded-full h-9 w-9" src="{{ Auth::user()->profile_img }}" alt="">
                             </div>
                             <div class="ml-3">
-                                <p class="text-sm font-medium text-white">Rojae Henry</p>
+                                <p class="text-sm font-medium text-white">{{ Auth()->user()->first_nm.' '.Auth()->user()->last_nm }}</p>
                             </div>
                         </div>
                     </a>

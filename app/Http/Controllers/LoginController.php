@@ -28,24 +28,14 @@ class LoginController extends Controller
                 return redirect('student-dashboard')->with('success', 'Login Successfully');
             }elseif (Auth::user()->user_type == 'Teacher'){
                 return redirect('dashboard')->with('success', 'Login Successfully');
+            }elseif (Auth::user()->user_type == 'Admin'){
+                return redirect('dashboard')->with('success', 'Login Successfully');
             }
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
-
-//        $request->session()->regenerate();
-//            if (Auth::user()->user_type == 'student') {
-//                return redirect('student-dashboard')->with('success', 'Login Successfully');
-//            }elseif (Auth::user()->user_type == 'Teacher'){
-//                return redirect('dashboard')->with('success', 'Login Successfully');
-//            }else{
-//                return back()->with('error', 'Login Failed');
-//            }
-//        return back()->with('error', 'Login Failed');
-//        }
-//        return back()->withErrors('error', 'Login Failed');
+        return back()->with([
+            'error' => 'The provided credentials do not match our records.',
+        ]);
     }
 
 }

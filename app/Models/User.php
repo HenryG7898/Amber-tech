@@ -48,14 +48,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function schedule(){
-        return $this->hasMany(class_schedule::class);
+    public function schedule()
+    {
+        return $this->hasMany(class_schedule::class, 'teacher_id', 'id');
     }
-    public function classroom(){
-        return $this->hasMany(class_schedule::class);
+
+    public function classroom()
+    {
+        return $this->hasMany(class_schedule::class, 'teacher_id', 'id');
     }
-    public function parent(){
-       return $this->hasMany(Parent_class::class,'student_id', 'id');
+
+    public function parent()
+    {
+        return $this->hasMany(Parent_class::class, 'student_id', 'id');
     }
 
 }

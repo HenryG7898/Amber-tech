@@ -5,23 +5,28 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class StudentClassController extends Controller
+class AdminController extends Controller
 {
     public function index(){
-        return view('Student.index');
+        return view('Admin.EditStudent');
     }
 
     public function updatestudent(Request $request){
-        $validate = $request->validate([
-            'profile_img' =>['required'],
-        ],[
-            'profile_img.required' => 'Please choose a Image to upload'
-        ]);
-
+//        $validate = $request->validate([
+//            'first_nm' =>['required','string'],
+//            'last_nm' =>['required','string'],
+//            'profile_img' =>['required'],
+//            'gender' =>['required','string'],
+//            'dob' =>['required'],
+//            'phone_nbr' =>['required','string','numeric',],
+//            'Email' =>['required','string','email'],
+//        ]);
+//dd($validate);
         $pathpfp = $request->file('profile_img')->store('public');
 
         $cus = new User();
         $data = $cus->find($request->id);
+//        dd($data);
         if ($data) {
             $data->first_nm = $request->first_nm;
             $data->last_nm = $request->last_nm;
@@ -32,12 +37,12 @@ class StudentClassController extends Controller
             $data->dob = $request->dob;
             $data->save();
         }
-        return redirect('student-profile')->with('success','Profile Has Been Updated');
+        return redirect('/');
     }
 
     public function Edit($id){
         $cus = new User();
         $data = $cus->find($id);
-        return view('Student.Editstudent',['data'=>$data]);
+        return view('Admin.EditStudent',['data'=>$data]);
     }
 }

@@ -2,6 +2,9 @@
 
 namespace App\Http\Livewire\AssignTeacher\Blade;
 
+use App\Models\class_schedule;
+use App\Models\subject;
+use App\Models\User;
 use Livewire\Component;
 
 class Php extends Component
@@ -20,13 +23,18 @@ class Php extends Component
         'start_time' => 'required',
         'end_time' => 'required',
     ];
+    protected $messages = [
+        'teacher_id.required' => 'The Teacher Name field is required.',
+        'subject_id.required' => 'The Subject field is required.',
+        'class_nm.required' => 'The Class Name field is required.',
+    ];
 
 
     public function classschedule()
     {
         $this->validate();
 
-        Class_schedule::create([
+        class_schedule::create([
             'class_nm' => $this->class_nm,
             'teacher_id'=> $this->teacher_id,
             'subject_id' => $this->subject_id,
@@ -47,7 +55,7 @@ class Php extends Component
 
     public function mount(){
         $teacher = User::all();
-        $subject = Subject::all();
+        $subject = subject::all();
         $this->teacher = $teacher;
         $this->subject = $subject;
     }

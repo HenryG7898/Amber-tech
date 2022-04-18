@@ -9,6 +9,8 @@ class class_schedule extends Model
 {
     use HasFactory;
 
+    protected $table = 'class_schedules';
+
     protected $fillable = [
         'teacher_id',
         'subject_id',
@@ -18,14 +20,14 @@ class class_schedule extends Model
     ];
 
     public function teacher(){
-        $this->belongsTo(User::class);
+       return $this->belongsTo(User::class,'teacher_id','id');
     }
 
-    public function subject(){
-        $this->belongsTo(subject::class);
+    public function subject_class(){
+       return $this->belongsTo(subject::class,'subject_id','id');
     }
-
-    public function classroom(){
-        $this->hasMany(class_schedule::class);
-    }
+//
+//    public function classroom(){
+//        $this->hasMany(class_schedule::class);
+//    }
 }

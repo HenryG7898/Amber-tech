@@ -14,19 +14,23 @@ class student_class extends Model
         'class_id'
     ];
 
-    public function student(){
-        $this->belongsTo(User::class);
+    public function student()
+    {
+        return $this->belongsTo(User::class, 'student_id', 'id');
     }
 
-    public function room(){
-        $this->belongsTo(class_schedule::class);
+    public function room()
+    {
+        return $this->belongsTo(class_schedule::class, 'class_id', 'id');
     }
 
-    public function subject(){
-        $this->belongsTo(subject::class);
+    public function subject()
+    {
+        return $this->belongsTo(subject::class, 'class_id', 'id');
     }
 
-    public function report(){
-        $this->hasMany(report_class::class);
+    public function report()
+    {
+        return $this->hasMany(report_class::class);
     }
 }

@@ -13,7 +13,8 @@ class subject extends Model
         'subject_nm'
     ];
 
-    public function schedule(){
-        $this->hasMany(class_schedule::class);
+    public function schedule()
+    {
+        return $this->hasMany(class_schedule::class, 'subject_id', 'id');
     }
 }

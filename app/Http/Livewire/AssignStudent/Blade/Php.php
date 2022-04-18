@@ -2,13 +2,16 @@
 
 namespace App\Http\Livewire\AssignStudent\Blade;
 
+use App\Models\class_schedule;
+use App\Models\student_class;
+use App\Models\User;
 use Livewire\Component;
 
 class Php extends Component
 {
     public $student_id;
     public $class_id;
-    public $class;
+    public $classes;
     public $student;
 
     protected $rules = [
@@ -21,7 +24,7 @@ class Php extends Component
     {
         $this->validate();
 
-        Student_class::create([
+        student_class::create([
             'student_id' => $this->student_id,
             'class_id'  => $this->class_id,
         ]);
@@ -32,8 +35,9 @@ class Php extends Component
     }
 
     public function mount(){
-        $class = Class_schedule::with('subject')->get();
+        $class = class_schedule::all();
         $student = User::all();
+//        dd($class);
         $this->class = $class;
         $this->student = $student;
     }
