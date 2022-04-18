@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\class_schedule;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -53,11 +54,13 @@ class TeacherClassController extends Controller
 
     public function schedule_class()
     {
-        return view('Teacher.Schedule');
+        $class = class_schedule::with('teacher','subject_class')->get();
+        return view('Teacher.Schedule',['class' => $class]);
     }
 
     public function student_class()
     {
-        return view('Teacher.student-list');
+        $student = User::all();
+        return view('Teacher.student-list',['student'=>$student]);
     }
 }

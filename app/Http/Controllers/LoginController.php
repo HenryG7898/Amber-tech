@@ -27,7 +27,7 @@ class LoginController extends Controller
             if (Auth::user()->user_type == 'student') {
                 return redirect('student-dashboard')->with('success', 'Login Successfully');
             }elseif (Auth::user()->user_type == 'Teacher'){
-                return redirect('dashboard')->with('success', 'Login Successfully');
+                return redirect('teacher-dashboard')->with('success', 'Login Successfully');
             }elseif (Auth::user()->user_type == 'Admin'){
                 return redirect('dashboard')->with('success', 'Login Successfully');
             }

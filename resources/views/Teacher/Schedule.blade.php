@@ -1,5 +1,42 @@
 @extends('layout.teacher')
 
-@section('content)
+@section('content')
+    <div>
+        <div class="my-5 -mb-2.5 text-center">
+            <div class="my-7"></div>
+            <div
+                class=" w-2/4 text-white rounded bg-black hover:bg-green-500 hover:text-black flex flex-col p-3 justify-center items-center  shadow-md my-5 rounded m-auto">
+                <div class="text-2xl text-center text-black   font-bold">
+                    <h1 class="text-white text-5xl font-bold"> Class Schedule</h1>
+                </div>
+            </div>
+        </div>
 
+        <div class=" ">
+            <div class=" ">
+                <table class="w-full border-collapse block md:table">
+                    <thead class="bg-black rounded-full">
+                    <tr>
+                        <th class="p-3 font-bold uppercase text-white ">Class Name</th>
+                        <th class="p-3 font-bold uppercase text-white hidden lg:table-cell">Subject Name</th>
+                        <th class="p-3 font-bold uppercase text-white hidden lg:table-cell">Start Date</th>
+                        <th class="p-3 font-bold uppercase text-white hidden lg:table-cell">End Date</th>
+                    </tr>
+                    </thead>
+                    @foreach($class as $classes)
+                        @if (Auth::user()->id === $classes->teacher_id)
+                            <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                                <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static">{{ $classes->class_nm }}</td>
+                                <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static">{{ $classes->subject_class->subject_nm }}</td>
+                                <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static">{{ $classes->Start_time }}</td>
+                                <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static">{{$classes->End_time}}</td>
+                            </tr>
+                        @endif
+                    @endforeach
+                </table>
+                <div class="text-white bg-black">
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

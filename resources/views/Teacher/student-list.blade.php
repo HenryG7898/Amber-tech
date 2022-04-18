@@ -17,24 +17,24 @@
                 </tr>
                 </thead>
                 <tbody class="border rounded bg-white">
-                {{--            @foreach($student as $trainee)--}}
-                {{--                @if ($trainee->user_type === 'student')--}}
-                {{--                    <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">--}}
-                {{--                        --}}{{--                                            <td class=""><img class="object-cover w-full h-full rounded-full" src="{{ $trainee->profile_img }}" alt="" loading="lazy" />--}}
-                {{--                        --}}{{--                                            </td>--}}
-                {{--                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->first_nm }}</td>--}}
-                {{--                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->last_nm }}</td>--}}
-                {{--                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->email }}</td>--}}
-                {{--                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->dob }}</td>--}}
-                {{--                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{$trainee->phone_nbr}}</td>--}}
-                {{--                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->gender }}</td>--}}
-                {{--                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">--}}
-                {{--                            <a href="{{ url('Edit-student/'.$trainee->id) }}" class="btn btn-primary p-2 text-white rounded bg-black hover:bg-green-500 hover:text-black" >Edit</a>--}}
-                {{--                            <a href="{{ url('ViewStudent/'. $trainee->id) }}" class="btn btn-primary p-2 text-white rounded bg-black hover:bg-green-500 hover:text-black" >View</a>--}}
-                {{--                        </td>--}}
-                {{--                    </tr>--}}
-                {{--                @endif--}}
-                {{--            @endforeach--}}
+                            @foreach($student as $trainee)
+                                @if ($trainee->user_type === 'student')
+                                    <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+{{--                                                                                    <td class=""><img class="object-cover w-full h-full rounded-full" src="{{ $trainee->profile_img }}" alt="" loading="lazy" />--}}
+{{--                                                                                    </td>--}}
+                                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->first_nm }}</td>
+                                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->last_nm }}</td>
+                                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->email }}</td>
+                                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->dob }}</td>
+                                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{$trainee->phone_nbr}}</td>
+                                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->gender }}</td>
+                                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">
+                                            <a href="{{ url('Edit-student/'.$trainee->id) }}" class="btn btn-primary p-2 text-white rounded bg-black hover:bg-green-500 hover:text-black" >Edit</a>
+                                            <a href="{{ url('ViewStudent/'. $trainee->id) }}" class="btn btn-primary p-2 text-white rounded bg-black hover:bg-green-500 hover:text-black" >View</a>
+                                        </td>
+                                    </tr>
+                                @endif
+                            @endforeach
                 </tbody>
             </table>
         </div>

@@ -40,11 +40,11 @@
                                 <li class="flex items-center py-3">
                                     <span>Status</span>
                                     <span class="ml-auto"><span
-                                            class="bg-green-500 py-1 px-2 rounded text-black text-sm">Active</span></span>
+                                            class="bg-green-500 py-1 px-2 rounded text-black text-sm">{{ Auth::user()->user_type }}</span></span>
                                 </li>
                                 <li class="flex items-center py-3">
                                     <span>Member since</span>
-                                    {{--                                    <span class="ml-auto">{{date("D-F-Y",strtotime(Auth::user()->created_at)) }}</span>--}}
+                                                                        <span class="ml-auto">{{date("D-F-Y",strtotime(Auth::user()->created_at)) }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -68,20 +68,20 @@
                                     <div class="grid grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">First Name:</div>
                                         <div class="px-4 py-2">
-                                            {{--                                            {{ Auth::user()->first_nm }}--}}
+                                                                                        {{ Auth::user()->first_nm }}
                                         </div>
                                     </div>
                                     <div class="grid grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">Last Name:</div>
-                                        {{--                                        <div class="px-4 py-2">{{ Auth::user()->last_nm }}</div>--}}
+                                                                                <div class="px-4 py-2">{{ Auth::user()->last_nm }}</div>
                                     </div>
                                     <div class="grid grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">Gender:</div>
-                                        {{--                                        <div class="px-4 py-2">{{ Auth::user()->gender }}</div>--}}
+                                                                                <div class="px-4 py-2">{{ Auth::user()->gender }}</div>
                                     </div>
                                     <div class="grid grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">Contact No:</div>
-                                        {{--                                        <div class="px-4 py-2">{{ Auth::user()->phone_nbr }}</div>--}}
+                                                                                <div class="px-4 py-2">{{ Auth::user()->phone_nbr }}</div>
                                     </div>
                                     <div class="grid grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">Current Address</div>
@@ -95,13 +95,13 @@
                                         <div class="px-4 py-2 font-semibold">Email:</div>
                                         <div class="px-1 py-2">
                                             <a class="text-black" href="mailto:jane@example.com">
-                                                {{--                                                {{ Auth::user()->email }}--}}
+                                                                                                {{ Auth::user()->email }}
                                             </a>
                                         </div>
                                     </div>
                                     <div class="grid grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">Date Of Birth:</div>
-                                        {{--                                        <div class="px-4 py-2">{{ Auth::user()->dob }}</div>--}}
+                                                                                <div class="px-4 py-2">{{ Auth::user()->dob }}</div>
                                     </div>
                                 </div>
                             </div>

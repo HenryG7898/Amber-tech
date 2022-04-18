@@ -1,9 +1,9 @@
 @extends('layout.app')
 
 @section('content')
-    <div class="m-auto my-16">
+    <div class="m-auto my-10">
 
-        <div class="bg-white m-auto   p-10 rounded shadow-2xl w-4/6">
+        <div class="bg-white m-auto p-8 rounded shadow-2xl w-4/6">
             @if ($data)
                 <h2 class="text-3xl font-bold mb-5 text-gray-800 text-center">Edit Your Information</h2>
 

@@ -1,6 +1,15 @@
 @extends('layout.admin')
 
 @section('content')
+    <div class="w-full px-8 py-4 mx-auto bg-white shadow-md dark:bg-gray-800">
+
+        <div class="flex items-center justify-between">
+
+            <span class="lg:text-lg text-sm lg:font-medium font-light text-gray-800 dark:text-gray-400">
+              Amber Tech Dashboard
+            </span>
+        </div>
+    </div>
     <div class="p-8 text-sm text-gray-800 overflow-y-auto">
         <h1 class="text-4xl text-gray-700 font-bold leading-none mb-8 text-center">Assign Class</h1>
         <table class="border w-full text-center shadow-sm">
@@ -23,14 +32,11 @@
                         {{--                                    <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->last_nm }}</td>--}}
                         <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->email }}</td>
                         <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->classroom[0]->class_nm }}</td>
+{{--                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->gender }}</td>--}}
                         <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">
-                            (876) {{$trainee->telephone}}</td>
-                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->gender }}</td>
-                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">
-                            <a href="{{ url('editstudent/'.$trainee->id) }}"
-                               class="btn btn-primary p-2 text-white rounded bg-black hover:bg-green-500 hover:text-black">Edit</a>
+
                             <a href=""
-                               class="btn btn-primary p-2 text-white rounded bg-black hover:bg-green-500 hover:text-black">View</a>
+                               class="btn btn-primary p-2 text-white rounded bg-black hover:bg-green-500 hover:text-black">Delete</a>
                         </td>
                     </tr>
                 @endif

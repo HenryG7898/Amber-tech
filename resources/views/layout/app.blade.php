@@ -15,11 +15,20 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="flex justify-between items-center border-b-2 border-gray-100 py-4 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
+                @auth
+                    <a href="{{ url('student-dashboard') }}">
+                        <span class="sr-only">Workflow</span>
+                        <span class="text-3xl font-bold text-orange-600">AMBER TECH</span>
+                        {{--                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">--}}
+                    </a>
+                @endauth
+                @guest
                 <a href="{{ url('/') }}">
                     <span class="sr-only">Workflow</span>
                     <span class="text-3xl font-bold text-orange-600">AMBER TECH</span>
 {{--                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">--}}
                 </a>
+                @endguest
             </div>
             <div class="-mr-2 -my-2 md:hidden">
                 <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" @click="menu = !menu">
@@ -31,8 +40,11 @@
             </div>
             <nav class="hidden md:flex space-x-10">
                 @auth
-                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                    <a href="{{ url('student-schedule') }}" class="text-base font-medium text-gray-500 hover:text-gray-900">
                         Class Schedule
+                    </a>
+                    <a href="{{ url('student-profile') }}" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                        Profile
                     </a>
                     <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
                         Report
