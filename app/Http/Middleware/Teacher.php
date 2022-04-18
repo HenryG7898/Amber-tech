@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class student
+class Teacher
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class student
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->user_type != 'Student') {
+        if (Auth::user()->user_type != 'Teacher') {
 
             return redirect()->route('login');
         }

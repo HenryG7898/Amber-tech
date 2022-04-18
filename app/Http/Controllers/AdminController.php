@@ -12,16 +12,11 @@ class AdminController extends Controller
     }
 
     public function updatestudent(Request $request){
-//        $validate = $request->validate([
-//            'first_nm' =>['required','string'],
-//            'last_nm' =>['required','string'],
-//            'profile_img' =>['required'],
-//            'gender' =>['required','string'],
-//            'dob' =>['required'],
-//            'phone_nbr' =>['required','string','numeric',],
-//            'Email' =>['required','string','email'],
-//        ]);
-//dd($validate);
+        $validate = $request->validate([
+            'profile_img' =>['required'],
+        ],[
+            'profile_img.required' => 'Please choose a Image to upload'
+        ]);
         $pathpfp = $request->file('profile_img')->store('public');
 
         $cus = new User();

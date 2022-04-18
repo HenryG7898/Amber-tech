@@ -15,6 +15,6 @@ class report_class extends Model
     ];
 
     public function student(){
-        $this->belongsTo(User::class);
+       return $this->belongsTo(User::class);
     }
 }

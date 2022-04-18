@@ -19,32 +19,38 @@ Route::get('/', function () {
 
 Route::get('report', [\App\Http\Controllers\ReportClassController::class, 'index']);
 
-//Route::get('review',function (){
-//    return view('Admin.Review');
-//});
-
 Route::get('Contact', [\App\Http\Controllers\ReportAdminController::class, 'index']);
 Route::post('report', [\App\Http\Controllers\ReportAdminController::class, 'reportstore']);
 
 Route::get('login', [\App\Http\Controllers\LoginController::class, 'index'])->name('login');
 Route::post('login', [\App\Http\Controllers\LoginController::class, 'onLogin']);
 
-//Route::view('login', 'test')->name('login');
-
 Route::get('register', [\App\Http\Controllers\RegisterController::class, 'index']);
 Route::post('register', [\App\Http\Controllers\RegisterController::class, 'store']);
 
-Route::get('student-dashboard', [\App\Http\Controllers\StudentClassController::class,'index']);
-Route::get('Student-edit/{id}', [\App\Http\Controllers\StudentClassController::class, 'Edit']);
-Route::post('update-user',[\App\Http\Controllers\StudentClassController::class,'updatestudent']);
 
-Route::get('student-profile', function () {
-    return view('Student.Profile');
+
+
+Route::middleware(['teacher', 'auth'])->group(function () {
+    Route::get('teacher-dashboard', [\App\Http\Controllers\TeacherClassController::class, 'index']);
+    Route::get('edit-info/{id}', [\App\Http\Controllers\TeacherClassController::class, 'edit_info']);
+    Route::get('editstudent/{id]', [\App\Http\Controllers\TeacherClassController::class, 'editstudent']);
+    Route::post('update-info', [\App\Http\Controllers\TeacherClassController::class, 'updatestudent']);
+    Route::get('class-schedule', [\App\Http\Controllers\TeacherClassController::class, 'schedule_class']);
+    Route::get('student-list', [\App\Http\Controllers\TeacherClassController::class, 'student_class']);
+    Route::get('teacher-profile', function () {
+        return view('Teacher.Profile');
+    });
 });
-Route::get('student-schedule', [\App\Http\Controllers\ClassScheduleController::class,'index']);
 
-Route::middleware(['student'])->group(function () {
-
+Route::middleware(['student', 'auth'])->group(function () {
+    Route::get('student-schedule', [\App\Http\Controllers\ClassScheduleController::class, 'index']);
+    Route::get('student-dashboard', [\App\Http\Controllers\StudentClassController::class, 'index']);
+    Route::get('Student-edit/{id}', [\App\Http\Controllers\StudentClassController::class, 'Edit']);
+    Route::post('update-user', [\App\Http\Controllers\StudentClassController::class, 'updatestudent']);
+    Route::get('student-profile', function () {
+        return view('Student.Profile');
+    });
 });
 
 

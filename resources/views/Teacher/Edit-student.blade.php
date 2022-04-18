@@ -1,4 +1,4 @@
-@extends('layout.admin')
+@extends('layout.teacher')
 
 @section('content')
     <section
@@ -30,22 +30,22 @@
                             <label class="block mb-1 font-bold text-gray-500">First Name</label>
                             <input type="hidden" value="{{ $data->id }}" name="id">
                             <input type="text" name="first_nm" value="{{ $data->first_nm }}" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
-{{--                            @error('first_nm') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
+                            {{--                            @error('first_nm') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
                         </div>
                         <div>
                             <label class="block mb-1 font-bold text-gray-500">Last Name</label>
                             <input type="text" name="last_nm" value="{{ $data->last_nm }}" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
-{{--                            @error('last_nm') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
+                            {{--                            @error('last_nm') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
                         </div>
                         <div>
                             <label class="block mb-1 font-bold text-gray-500">Date of Birth</label>
                             <input type="date" name="dob" value="{{ $data->dob }}"  class="w-full border-2 border-gray-200 p-2.5 rounded outline-none focus:border-purple-500">
-{{--                            @error('dob') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
+                            {{--                            @error('dob') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
                         </div>
                         <div>
                             <label class="block mb-1 font-bold text-gray-500">Telephone Number</label>
                             <input type="text" name="phone_nbr" value="{{ $data->phone_nbr }}" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
-{{--                            @error('phone_nbr') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
+                            {{--                            @error('phone_nbr') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
                         </div>
                         <div>
                             <label class="block mb-1 font-bold text-gray-500">Gender</label>
@@ -60,19 +60,19 @@
 
                                 @endif
                             </select>
-{{--                            @error('gender') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
+                            {{--                            @error('gender') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
 
                         </div>
 
                         <div>
                             <label class="block mb-1 font-bold text-gray-500">Email</label>
                             <input type="email" name="email" value="{{ $data->email }}" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
-{{--                            @error('email') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
+                            {{--                            @error('email') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
                         </div>
                         <div>
                             <label class="block mb-1 font-bold text-gray-500">Profile Image</label>
                             <input type="file" name="profile_img" value="{{ $data->profile_img }}" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
-{{--                            @error('profile_img') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
+                            {{--                            @error('password') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
                         </div>
                     </div>
                     <div class="flex justify-end mt-6 space-x-1">
