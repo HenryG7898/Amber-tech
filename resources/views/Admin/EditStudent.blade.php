@@ -21,7 +21,7 @@
                 </div>
             @endif
             <div>
-                <h2 class="text-4xl font-bold mb-10 text-gray-800 text-center">New Student</h2>
+                <h2 class="text-4xl font-bold mb-10 text-gray-800 text-center">Edit Student</h2>
 
                 <form class="space-y-2 space-x-1 " action="{{ url('update-student') }}" method="POST" enctype="multipart/form-data">
                     @csrf
