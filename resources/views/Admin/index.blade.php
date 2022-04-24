@@ -153,13 +153,6 @@
                             </table>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img
-                            class="object-cover w-full h-96"
-                            src="https://source.unsplash.com/collection/190728/3000x900"
-                            alt="image"
-                        />
-                    </div>
                 </div>
 
                 <div id="slider" class="swiper-container w-full">
