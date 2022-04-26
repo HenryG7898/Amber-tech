@@ -71,23 +71,23 @@
     </div>
     <div class="my-5"></div>
     <section class="w-full  text-gray-900 h-full py-36 bg-gradient-to-b from-white via-orange-600 to-orange-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 flex items-center justify-center">
-            <div class="lg:w-3/6 lg:pr-0 pr-0">
+        <div class="max-w-7xl mx-auto px-4 gap-5 sm:px-6 lg:px-4 flex items-center justify-center">
+            <div style="" class="lg:w-3/6 lg:pr-0 pr-0">
                 <h1 class="font-medium text-5xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
                 <p class="leading-relaxed mt-4 text-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="lg:w-3/6 xl:w-2/5 md:w-full bg-gray-50 p-8 flex flex-col lg:ml-auto w-full mt-10 lg:mt-0 rounded-md">
-                <img src="https://evernote.com/c/assets/homepage-repackaging/clip_the_web__en.png?117a41cc66580358" alt="">
+            <div style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);" class="lg:w-3/6 lg:pr-0 bg-gray-50 pr-0 object-cover rounded-md">
+                <img src="https://moey.gov.jm/wp-content/uploads/2021/02/IMG-20210222-WA0015.jpg" alt="">
             </div>
         </div>
         <div class="my-20"></div>
-        <div class="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-4 flex items-center justify-center">
-            <div class="lg:w-3/6 lg:pr-0 bg-gray-50 pr-0 p-8 rounded-md">
-                <img src="https://evernote.com/c/assets/homepage-repackaging/clip_the_web__en.png?117a41cc66580358" alt="">
+        <div class="max-w-7xl mx-auto gap-5 px-4 sm:px-6 lg:px-4 flex items-center justify-center">
+            <div style="clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);" class="lg:w-3/6 lg:pr-0 bg-gray-50 pr-0 object-cover rounded-md">
+                <img src="https://our.today/wp-content/uploads/2021/07/ncb-foundation-amber-coding-academy-our-today-demo-1-1024x683.jpg" alt="">
             </div>
-            <div class="lg:w-3/6 xl:w-2/5 md:w-full flex flex-col lg:ml-auto w-full mt-10 lg:mt-0 ">
+            <div class="lg:w-3/6 lg:pr-0 pr-0 ">
                 <h1 class="font-medium text-5xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
                 <p class="leading-relaxed mt-4 text-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,

@@ -58,13 +58,14 @@ Route::middleware(['admin', 'auth'])->group(function () {
     Route::get('ViewStudent/{id}', [\App\Http\Controllers\ViewStudent::class, 'studentinfo']);
     Route::post('Add-parent', [\App\Http\Controllers\ViewStudent::class, 'store']);
     Route::get('dashboard', [\App\Http\Controllers\Dashboard::class, 'index']);
+    Route::get('delete/{id}', [\App\Http\Controllers\Dashboard::class, 'destroy']);
     Route::get('profile-card', [\App\Http\Controllers\Dashboard::class, 'show']);
     Route::get('Edit-student/{id}', [\App\Http\Controllers\AdminController::class, 'Edit']);
     Route::post('update-student', [\App\Http\Controllers\AdminController::class, 'updatestudent']);
     Route::get('review', [\App\Http\Controllers\Dashboard::class, 'overview']);
-    Route::view('teacher', 'Admin.add-teacher');
-    Route::view('subject', 'Admin.add-subject');
-    Route::view('student', 'Admin.add-student');
+    Route::view('create-teacher', 'Admin.add-teacher');
+    Route::view('create-subject', 'Admin.add-subject');
+    Route::view('create-student', 'Admin.add-student');
     Route::view('Assign-student', 'Admin.Assgin-student-class');
     Route::view('Assign-teacher', 'Admin.Assign-Teacher');
 });

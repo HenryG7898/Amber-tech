@@ -1,6 +1,14 @@
 <div>
-    <div class="sm:mx-auto lg:mx-auto w-full h-screen bg-black
-                flex items-center shadow-lg"
+    <div class="w-full px-8 py-4 mx-auto bg-white shadow-md dark:bg-gray-800">
+
+        <div class="flex items-center justify-between">
+
+            <span class="lg:text-lg text-sm lg:font-medium font-light text-gray-800 dark:text-gray-400">
+              Amber Tech Dashboard
+            </span>
+        </div>
+    </div>
+    <div class="mt-28"
     >
 
         <section
@@ -26,7 +34,7 @@
                                 <select wire:model="student_id" id="" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
                                     <option value="">Select a Student</option>
                                     @foreach($student as $students)
-                                        @if ($students->user_type === 'student')
+                                        @if ($students->user_type === 'Student')
                                             <option value="{{ $students->id }}">{{ $students->first_nm.' '.$students->last_nm }}</option>
                                         @endif
                                     @endforeach
@@ -51,8 +59,8 @@
                                    rounded-md hover:bg-green-600 focus:outline-none focus:bg-gray-600">
                                 Save
                             </button>
-                            <a class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-red-500
-                            rounded-md hover:bg-red-600 focus:outline-none focus:bg-gray-600" href="{{ url('dashboard') }}">back</a>
+{{--                            <a class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-red-500--}}
+{{--                            rounded-md hover:bg-red-600 focus:outline-none focus:bg-gray-600" href="{{ url('dashboard') }}">back</a>--}}
                         </div>
                     </form>
 

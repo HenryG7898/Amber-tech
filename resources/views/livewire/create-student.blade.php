@@ -1,6 +1,15 @@
 
         <div>
-            <div class="sm:mx-auto lg:mx-auto w-full h-full pt-9 pb-2 bg-white
+            <div class="w-full px-8 py-4 mx-auto bg-white shadow-md dark:bg-gray-800">
+
+                <div class="flex items-center justify-between">
+
+            <span class="lg:text-lg text-sm lg:font-medium font-light text-gray-800 dark:text-gray-400">
+              Amber Tech Dashboard
+            </span>
+                </div>
+            </div>
+            <div class=" bg-white my-10
                 flex items-center "
             >
 

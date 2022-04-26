@@ -1,8 +1,16 @@
 @extends('layout.admin')
 
 @section('content')
+    <div class="w-full px-8 py-4 mx-auto bg-white shadow-md dark:bg-gray-800">
 
-    <div class="text-gray-900 ">
+        <div class="flex items-center justify-between">
+
+            <span class="lg:text-lg text-sm lg:font-medium font-light text-gray-800 dark:text-gray-400">
+              Amber Tech Dashboard
+            </span>
+        </div>
+    </div>
+    <div class="text-gray-900 my-10">
         <div class="p-4 ">
             <h1 class="text-3xl text-center">
                 User Report

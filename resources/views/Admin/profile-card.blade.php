@@ -26,6 +26,10 @@
 
 
             </div>
+            <div class="mb-5 mt-5">
+                {{ $card->links() }}
+            </div>
+
         </div>
     </section>
 @endsection

@@ -1,7 +1,14 @@
 <div>
-    <div class="sm:mx-auto lg:mx-auto   left-0 w-full h-screen bg-black bg-opacity-75
-                flex items-center shadow-lg overflow-y-auto"
-         x-show="">
+    <div class="w-full px-8 py-4 mx-auto bg-white shadow-md dark:bg-gray-800">
+
+        <div class="flex items-center justify-between">
+
+            <span class="lg:text-lg text-sm lg:font-medium font-light text-gray-800 dark:text-gray-400">
+              Amber Tech Dashboard
+            </span>
+        </div>
+    </div>
+    <div class="my-20">
 
         <section
             class="w-3/5 p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
@@ -41,13 +48,13 @@
                                 @error('teacher_id') <span class="error text-red-600">{{ $message }}</span> @enderror
                             </div>
                             <div>
-                                <label class="block mb-1 font-bold text-gray-500">Start Time</label>
-                                <input type="datetime-local" wire:model="start_time" class="w-full border-2 border-gray-200 p-2.5 rounded outline-none focus:border-purple-500">
+                                <label class="block mb-1 font-bold text-gray-500">Start Date</label>
+                                <input type="date" wire:model="start_time" class="w-full border-2 border-gray-200 p-2.5 rounded outline-none focus:border-purple-500">
                                 @error('start_time') <span class="error text-red-600">{{ $message }}</span> @enderror
                             </div>
                             <div>
-                                <label class="block mb-1 font-bold text-gray-500">End Time</label>
-                                <input type="datetime-local" wire:model="end_time" class="w-full border-2 border-gray-200 p-2.5 rounded outline-none focus:border-purple-500">
+                                <label class="block mb-1 font-bold text-gray-500">End Date</label>
+                                <input type="date" wire:model="end_time" class="w-full border-2 border-gray-200 p-2.5 rounded outline-none focus:border-purple-500">
 
                                 @error('end_time') <span class="error text-red-600">{{ $message }}</span> @enderror
                             </div>
@@ -69,8 +76,8 @@
                                    rounded-md hover:bg-green-600 focus:outline-none focus:bg-gray-600">
                                 Save
                             </button>
-                            <a class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-red-500
-                            rounded-md hover:bg-red-600 focus:outline-none focus:bg-gray-600" href="{{ url('dashboard') }}">back</a>
+{{--                            <a class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-red-500--}}
+{{--                            rounded-md hover:bg-red-600 focus:outline-none focus:bg-gray-600" href="{{ url('dashboard') }}">back</a>--}}
                         </div>
                     </form>
 

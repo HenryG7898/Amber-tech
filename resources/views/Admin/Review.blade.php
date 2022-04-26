@@ -26,22 +26,23 @@
             </thead>
             <tbody class="border rounded bg-white">
             @foreach($teacher as $trainee)
-                @if ($trainee->user_type == 'Teacher')
+                @if ($trainee->user_type === 'Teacher')
                     <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
                         <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->first_nm.' '.$trainee->last_nm }}</td>
                         {{--                                    <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->last_nm }}</td>--}}
                         <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->email }}</td>
-                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->classroom[0]->class_nm }}</td>
+                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">Class Room</td>
 {{--                        <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">{{ $trainee->gender }}</td>--}}
                         <td class="w-full lg:w-auto p-3 text-gray-800 border-b text-center block lg:table-cell relative lg:static">
 
                             <a href=""
-                               class="btn btn-primary p-2 text-white rounded bg-black hover:bg-green-500 hover:text-black">Delete</a>
+                               class="btn btn-primary p-2 text-white rounded bg-black hover:bg-red-700">Delete</a>
                         </td>
                     </tr>
                 @endif
             @endforeach
             </tbody>
         </table>
+        {{ $teacher->links() }}
     </div>
 @endsection
