@@ -15,12 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/list',[\App\Http\Controllers\API\DashboardController::class,'index']);
+Route::get('/Create/New-users',[\App\Http\Controllers\API\DashboardController::class,'store']);
+Route::get('/search/{name}',[\App\Http\Controllers\API\DashboardController::class,'search']);
 
 Route::post('/register',[\App\Http\Controllers\API\RegisterController::class,'register']);
 Route::post('/login',[\App\Http\Controllers\API\LoginController::class,'login']);
 
-Route::group(['middleware' => ['auth:sanctum']], function () {
 
+Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/logout', [\App\Http\Controllers\API\LoginController::class,'logout']);
 });
 
