@@ -32,12 +32,21 @@ class AdminController extends Controller
             $data->dob = $request->dob;
             $data->save();
         }
-        return redirect('/');
+        return redirect('/dashboard')->with('success','Information Updated');
     }
 
     public function Edit($id){
         $cus = new User();
         $data = $cus->find($id);
         return view('Admin.EditStudent',['data'=>$data]);
+    }
+
+    public function delete_admin($id){
+        $delete = User::destroy($id);
+        return redirect('login')->with('success','Account Deleted');
+    }
+    public function delete_student($id){
+        $delete = User::destroy($id);
+        return redirect('dashboard')->with('success','Student Account Deleted');
     }
 }

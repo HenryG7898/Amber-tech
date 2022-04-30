@@ -21,9 +21,9 @@
                 </div>
             @endif
             <div>
-                <h2 class="text-4xl font-bold mb-10 text-gray-800 text-center">New Student</h2>
+                <h2 class="text-4xl font-bold mb-10 text-gray-800 text-center">Edit Student</h2>
 
-                <form class="space-y-2 space-x-1 " action="{{ url('update-student') }}" method="POST" enctype="multipart/form-data">
+                <form class="space-y-2 space-x-1 " action="{{ url('student-update') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="grid grid-cols-3 gap-6 mt-4 sm:grid-cols-2">
                         <div>
@@ -72,7 +72,7 @@
                         <div>
                             <label class="block mb-1 font-bold text-gray-500">Profile Image</label>
                             <input type="file" name="profile_img" value="{{ $data->profile_img }}" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
-                            {{--                            @error('password') <span class="error text-red-600">{{ $message }}</span> @enderror--}}
+                                                        @error('profile_img') <span class="error text-red-600">{{ $message }}</span> @enderror
                         </div>
                     </div>
                     <div class="flex justify-end mt-6 space-x-1">
@@ -80,7 +80,7 @@
                                    rounded-md hover:bg-green-600 focus:outline-none focus:bg-gray-600">
                             Update
                         </button>
-                        <a href="{{ url('/') }}" class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-red-500
+                        <a href="{{ url('student-list') }}" class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-red-500
                                    rounded-md hover:bg-red-600 focus:outline-none focus:bg-gray-600">
                             Cancel
                         </a>

@@ -371,7 +371,7 @@
                     </nav>
                 </div>
                 <div class="flex flex-shrink-0 p-4 px-4 bg-indigo-600">
-                    <a href="#" class="flex-shrink-0 block w-full group">
+                    <a href="{{ url('admin-profile') }}" class="flex-shrink-0 block w-full group">
                         <div class="flex items-center">
                             <div>
                                 <img class="inline-block rounded-full h-9 w-9" src="{{ Auth::user()->profile_img }}" alt="">

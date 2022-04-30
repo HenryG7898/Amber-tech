@@ -1,8 +1,17 @@
 @extends('layout.admin')
 
 @section('content')
+    <div class="w-full px-8 py-4 mx-auto bg-white shadow-md dark:bg-gray-800">
+
+        <div class="flex items-center justify-between">
+
+            <span class="lg:text-lg text-sm lg:font-medium font-light text-gray-800 dark:text-gray-400">
+              Amber Tech Dashboard
+            </span>
+        </div>
+    </div>
     <section
-        class="w-11/12 md:w-3/5 p-6 mx-auto bg-white rounded-md">
+        class="w-11/12 md:w-3/5 p-6 my-5 mx-auto bg-white rounded-md">
         <div>
             @if(session()->has('success'))
                 <div class="flex w-full max-w-sm mx-auto overflow-hidden mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -21,7 +30,7 @@
                 </div>
             @endif
             <div>
-                <h2 class="text-4xl font-bold mb-10 text-gray-800 text-center">Edit Student</h2>
+                <h2 class="text-4xl font-bold mb-10 text-gray-800 text-center">Edit Information</h2>
 
                 <form class="space-y-2 space-x-1 " action="{{ url('update-student') }}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -80,7 +89,7 @@
                                    rounded-md hover:bg-green-600 focus:outline-none focus:bg-gray-600">
                             Update
                         </button>
-                        <a href="{{ url('/') }}" class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-red-500
+                        <a href="{{ url('dashboard') }}" class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-red-500
                                    rounded-md hover:bg-red-600 focus:outline-none focus:bg-gray-600">
                             Cancel
                         </a>

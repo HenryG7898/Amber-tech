@@ -45,4 +45,13 @@ class StudentClassController extends Controller
         $data = $cus->find($id);
         return view('Student.Editstudent',['data'=>$data]);
     }
+
+    public function delete($id){
+
+        $data = User::find($id);
+
+        $data->delete();
+
+        return redirect('login')->with('success', 'Account Deleted Successfully');
+    }
 }

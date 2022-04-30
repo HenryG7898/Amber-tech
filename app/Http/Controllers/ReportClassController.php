@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\report_admin;
 use App\Models\report_class;
 use Illuminate\Http\Request;
 
 class ReportClassController extends Controller
 {
     public function index(){
-        $report = report_class::with('student')->get();
+        $report = report_admin::all();
         return view('Admin.report',['report'=>$report]);
     }
 
@@ -19,5 +20,10 @@ class ReportClassController extends Controller
             'details' => $request->detials,
         ]);
         return back()->with('success', 'Report Sent');
+    }
+
+    public function destroy($id){
+        $delete = report_admin::destroy($id);
+        return back()->with('success','Report Deleted');
     }
 }

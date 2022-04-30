@@ -17,7 +17,7 @@ class student
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->user_type != 'student') {
+        if (Auth::user()->user_type != 'Student') {
 
             return redirect()->route('login');
         }

@@ -53,4 +53,9 @@ class ViewStudent extends Controller
 
         return back()->with('success','Parent Added Successfully');
     }
+
+    public function delete_parent($id){
+        $delete = Parent_class::destroy($id);
+        return back()->with('success','Parent Deleted');
+    }
 }

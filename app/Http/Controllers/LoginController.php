@@ -24,7 +24,7 @@ class LoginController extends Controller
 
             $request->session()->regenerate();
 
-            if (Auth::user()->user_type == 'student') {
+            if (Auth::user()->user_type == 'Student') {
                 return redirect('student-dashboard')->with('success', 'Login Successfully');
             }elseif (Auth::user()->user_type == 'Teacher'){
                 return redirect('teacher-dashboard')->with('success', 'Login Successfully');

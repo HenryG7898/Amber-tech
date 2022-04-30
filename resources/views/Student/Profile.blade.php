@@ -116,7 +116,6 @@
                             </a>
                         </div>
 
-                        <!-- End of about section -->
 
                         <div class="my-4"></div>
                         <div class="w-full md:w-12/12 mx-0" style="margin-right: 10%">
@@ -127,7 +126,7 @@
                                         account.</p>
 
                                 </div>
-                                <form action="{{ url('Delete/'.Auth()->user()->id) }}" method="post">
+                                <form action="{{ url('delete/'.Auth()->user()->id) }}" method="post">
                                     @csrf
                                     <a style="text-decoration: none; font-size: 25px">
                                         <button type="submit"

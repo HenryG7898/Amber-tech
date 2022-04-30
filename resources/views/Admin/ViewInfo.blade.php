@@ -12,13 +12,23 @@
               Student Dashboard
 
             </span>
-
-                <a @click="isOpen =true" class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-200 transform bg-indigo-600
+                <div class="space-x-3">
+                    <a @click="isOpen =true" class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-200 transform bg-indigo-600
                       rounded cursor-pointer hover:bg-indigo-500">
 
-                    Create Parent
+                        Create Parent
 
-                </a>
+                    </a>
+                    @if ($data)
+                    <a href="{{ url('delete-student/'.$data[0]->id) }}" class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-200 transform bg-red-600
+                      rounded cursor-pointer">
+
+                        Delete Account
+
+                    </a>
+                </div>
+
+
 
             </div>
         </div>
@@ -29,7 +39,7 @@
                           d="M12,0A12,12,0,1,0,24,12,12.014,12.014,0,0,0,12,0Zm6.927,8.2-6.845,9.289a1.011,1.011,0,0,1-1.43.188L5.764,13.769a1,1,0,1,1,1.25-1.562l4.076,3.261,6.227-8.451A1,1,0,1,1,18.927,8.2Z"
                     ></path>
                 </svg>
-                <span class="text-green-800"> {{ session('success') }} </span>
+                <span class="text-green-800 text-center"> {{ session('success') }} </span>
             </div>
         @endif
 
@@ -40,17 +50,9 @@
 
             <section @click.away="isOpen = false"
                      class="w-3/5 p-6 mx-48 bg-white rounded-md shadow-md dark:bg-gray-800">
-                @if (session()->has('error'))
-                    <div class="bg-red-200 px-6 py-4 mx-2 -my-5 mb-5 rounded-md text-lg flex items-center mx-auto w-3/4 xl:w-2/4">
-                        <svg viewBox="0 0 24 24" class="text-red-600 w-5 h-5 sm:w-5 sm:h-5 mr-3">
-                            <path fill="currentColor" d="M11.983,0a12.206,12.206,0,0,0-8.51,3.653A11.8,11.8,0,0,0,0,12.207,11.779,11.779,0,0,0,11.8,24h.214A12.111,12.111,0,0,0,24,11.791h0A11.766,11.766,0,0,0,11.983,0ZM10.5,16.542a1.476,1.476,0,0,1,1.449-1.53h.027a1.527,1.527,0,0,1,1.523,1.47,1.475,1.475,0,0,1-1.449,1.53h-.027A1.529,1.529,0,0,1,10.5,16.542ZM11,12.5v-6a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Z"></path>
-                        </svg>
-                        <span class="text-red-800"> {{ session('error') }} </span>
-                    </div>
-                @endif
 
                 <h2 class="text-lg font-semibold text-center text-gray-700 capitalize dark:text-white">New Parent</h2>
-                    @if ($data)
+
                 <form method="post" action="{{ url('Add-parent') }}">
                     @csrf
                     <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
@@ -240,7 +242,7 @@
                                     <td class="py-4 px-6 border-b border-grey-light">{{$value->phone_nbr}}</td>
                                     <td class="py-4 px-6 border-b border-grey-light">{{$value->relation}}</td>
                                     <td class="py-4 px-6 border-b border-grey-light">
-                                        <a href="#" class="btn btn-primary p-2 text-white rounded font-bold bg-black hover:bg-red-700 hover:text-black" >Delete</a>
+                                        <a href="{{ url('delete-parent/'.$value->id) }}" class="btn btn-primary p-2 text-white rounded font-bold bg-black hover:bg-red-700 hover:text-black" >Delete</a>
 
                                     </td>
 
