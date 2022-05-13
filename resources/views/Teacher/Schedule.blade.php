@@ -5,7 +5,7 @@
         <div class="my-5 -mb-2.5 text-center">
             <div class="my-7"></div>
             <div
-                class=" w-2/4 text-white rounded bg-black hover:bg-green-500 hover:text-black flex flex-col p-3 justify-center items-center  shadow-md my-5 rounded m-auto">
+                class=" w-2/4 text-white rounded bg-black hover:text-black flex flex-col p-3 justify-center items-center  shadow-md my-5 rounded m-auto">
                 <div class="text-2xl text-center text-black   font-bold">
                     <h1 class="text-white text-5xl font-bold"> Class Schedule</h1>
                 </div>

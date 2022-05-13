@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Hash;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -21,7 +22,7 @@ class RegisterController extends Controller
             'gender' =>['required','string'],
             'dob' =>['required'],
             'phone_nbr' =>['required','string','numeric',],
-            'email' =>['required','string','email'],
+            'email' =>['required','string','unique:users','email'],
             'password' => ['required']
         ],[
             'first_nm.required' => 'The First Name field is required.',
@@ -41,6 +42,11 @@ class RegisterController extends Controller
             'password' => hash::make($request->password)
         ]);
 
-        return 'ok';
+        if(Auth::attempt($validate)){
+            $request->session()->regenerate();
+            return redirect('student-dashboard');
+        }
+
+        return  redirect('Login');
     }
 }

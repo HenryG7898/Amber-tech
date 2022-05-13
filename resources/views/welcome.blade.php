@@ -46,16 +46,17 @@
 {{--                    </div>--}}
                 </div>
 
-                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                <main class="mt-20 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                     <div class="sm:text-center lg:text-left">
                         <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                             <span class="block xl:inline">Amber Technical</span>
                             <span class="block text-orange-600 xl:inline">High School</span>
                         </h1>
-                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. <br/>
+                            For more information you can scrolled down or Click the button below to request more details.</p>
+                        <div class="mt-10 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                             <div class="rounded-md shadow">
-                                <a href="{{ url('register') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-500 md:py-4 md:text-lg md:px-10"> Get started </a>
+                                <a href="{{ url('Contact') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-500 md:py-4 md:text-lg md:px-10"> Contact Us </a>
                             </div>
                             <div class="mt-3 sm:mt-0 sm:ml-3">
                                 {{--                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"> Live demo </a>--}}
@@ -69,14 +70,15 @@
             <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://cambridgeteachingnetwork.files.wordpress.com/2020/12/istock-976595416.jpg?w=750" alt="">
         </div>
     </div>
-    <div class="my-5"></div>
-    <section class="w-full  text-gray-900 h-full py-36 bg-gradient-to-b from-white via-orange-600 to-orange-600">
+    <div class="my-20"></div>
+    <section class="w-full mt-28 text-gray-900 h-full py-36 bg-gradient-to-b from-white via-orange-600 to-orange-600">
         <div class="max-w-7xl mx-auto px-4 gap-5 sm:px-6 lg:px-4 flex items-center justify-center">
             <div style="" class="lg:w-3/6 lg:pr-0 pr-0">
-                <h1 class="font-medium text-5xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <h1 class="font-medium text-5xl text-white">Functionality for managing all student's classes</h1>
                 <p class="leading-relaxed mt-4 text-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
             </div>
             <div style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);" class="lg:w-3/6 lg:pr-0 bg-gray-50 pr-0 object-cover rounded-md">
                 <img src="https://moey.gov.jm/wp-content/uploads/2021/02/IMG-20210222-WA0015.jpg" alt="">
@@ -88,7 +90,7 @@
                 <img src="https://our.today/wp-content/uploads/2021/07/ncb-foundation-amber-coding-academy-our-today-demo-1-1024x683.jpg" alt="">
             </div>
             <div class="lg:w-3/6 lg:pr-0 pr-0 ">
-                <h1 class="font-medium text-5xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <h1 class="font-medium text-5xl text-white">Personalized Students and Teachers Infromation</h1>
                 <p class="leading-relaxed mt-4 text-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

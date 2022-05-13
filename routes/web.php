@@ -45,7 +45,8 @@ Route::middleware(['teacher', 'auth'])->group(function () {
 });
 
 Route::middleware(['student', 'auth'])->group(function () {
-    Route::get('student-schedule', [\App\Http\Controllers\ClassScheduleController::class, 'index']);
+//    Route::get('student-schedule', [\App\Http\Controllers\ClassScheduleController::class, 'index']);
+    Route::view('student-schedule', 'Student.test');
     Route::get('student-dashboard', [\App\Http\Controllers\StudentClassController::class, 'index']);
     Route::post('delete/{id}', [\App\Http\Controllers\StudentClassController::class, 'delete']);
     Route::get('Student-edit/{id}', [\App\Http\Controllers\StudentClassController::class, 'Edit']);

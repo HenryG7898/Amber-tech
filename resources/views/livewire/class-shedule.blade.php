@@ -1,6 +1,4 @@
-@extends('layout.app')
-
-@section('content')
+<div>
     <div class="my-5 -mb-2.5 text-center">
         <div class="my-7"></div>
         <div
@@ -29,7 +27,7 @@
                 </tr>
                 </thead>
                 @foreach($class as $classes)
-                    @if (Auth::user()->id === $classes->student_id)
+                    @if (Auth::user()->id === $classes->student->id)
 
 
                         <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
@@ -40,6 +38,7 @@
                                 <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static">{{ 'Teacher Name Not Available' }}</td>
                             @endif
                             <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static">{{ 'Class Subject' }}</td>
+{{--                            <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static">{{ $classes->subject[0]->subject_nm }}</td>--}}
                             <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static">{{ $classes->room->Start_time }}</td>
                             {{--                        <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static"></td>--}}
                             <td class="w-full lg:w-auto p-3 text-gray-800 text-center  border-b text-center block lg:table-cell relative lg:static">{{$classes->room->End_time}}</td>
@@ -54,4 +53,4 @@
             </div>
         </div>
     </div>
-@endsection
+</div>

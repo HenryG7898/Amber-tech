@@ -29,11 +29,11 @@
                             <form method="post" action{{ url("register") }}>
                                 @csrf
                                 <div class="grid grid-cols-2 space-x-5">
-                                <div class="\">
+                                <div class="ml-5">
                                     <label for="firstName" class="inline-block mb-1 font-medium">First name</label>
                                     <input
                                         type="text"
-                                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                        class=" w-full h-12 px-4  mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                                         id="firstName"
                                         name="first_nm"
                                     />
